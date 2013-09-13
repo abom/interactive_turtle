@@ -9,17 +9,21 @@ could it be a replacement for turtle wax in KidsRuby?
 for testing:
 
 ``` ruby
-require 'interacitve_turtle'
+require 'interactive_turtle'
 
 app = Qt::Application.new(ARGV)
 
 InteractiveTurtle.start do
-
+  background lightblue
+  pensize 2
+  4.times do
+    forward 100
+    turnleft 90
+  end
 end
 
 app.exec
-...
-
+```
 and the scene might be used directly also:
 
 ``` ruby
@@ -42,7 +46,7 @@ TurtleScene.start do
 end
 
 app.exec
-...
+```
 
 
 it's a try and not complete.
