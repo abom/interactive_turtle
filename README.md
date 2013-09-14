@@ -1,33 +1,30 @@
-interactive_turtle
+Interactive Turtle
 ==================
 
-turtle graphics with QtRuby and Hackety Hack style.
-with the help of kidsruby, turtle wax and hackety hack code.
+Turtle graphics in QtRuby and Hackety Hack style,
+with the help of KidsRuby, Turtle Wax and Hackety Hack code.
 
-could it be a replacement for turtle wax in KidsRuby?
+Could it be a replacement for turtle wax in KidsRuby?
 
-for testing:
+For testing:
 
-``` ruby
-require 'interactive_turtle'
-
-app = Qt::Application.new(ARGV)
-
-InteractiveTurtle.start do
-  background lightblue
-  pensize 2
-  4.times do
-    forward 100
-    turnleft 90
-  end
-end
-
-app.exec
 ```
-and the scene might be used directly also:
+ruby interactive_turtle.rb
+```
+
+You can edit:
 
 ``` ruby
-require 'turtle_scene'
+  InteractiveTurtle.start do
+    # ...
+  end
+```
+
+with the steps you want, and the scene might be used directly also:
+
+``` ruby
+require 'Qt4'
+require './turtle_scene'
 
 app = Qt::Application.new(ARGV)
 
@@ -48,8 +45,11 @@ end
 app.exec
 ```
 
-
-it's a try and not complete.
+## Dependencies
+** QtRuby
+```
+gem install qtbindings
+```
 
 ## Current Features
 * It can change pen color while drawing.
@@ -57,6 +57,8 @@ it's a try and not complete.
 * Different drawing speeds.
 
 ## Drawbacks
-* it uses QTimer (less interval, more cpu load?).
-* limited speed with large drawing.
-* others!
+* It uses QTimer (less interval, more cpu load?).
+* Limited speed with large drawing.
+* It's a try (not yet completed).
+* Others!
+

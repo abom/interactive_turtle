@@ -210,15 +210,14 @@ end
 
 
 if $0 == __FILE__
-
   app = Qt::Application.new(ARGV)
 
   InteractiveTurtle.start do
     background lightblue
     pensize 2
     4.times do
-      forward 100
-      turnleft 90
+     forward 100
+     turnleft 90
     end
   end
 

@@ -1,5 +1,3 @@
-require 'Qt4'
-
 include Math
 
 def degrees(rad)
