@@ -46,7 +46,7 @@ app.exec
 ```
 
 ## Dependencies
-** QtRuby
+* QtRuby
 ```
 gem install qtbindings
 ```
